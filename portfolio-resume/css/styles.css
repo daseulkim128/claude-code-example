@@ -1,0 +1,84 @@
+/* 커스텀 애니메이션 및 스타일 */
+
+/* 페이드인 애니메이션 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 스크롤바 스타일 (Webkit 브라우저) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ea5e9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
+
+/* 다크모드 스크롤바 */
+.dark ::-webkit-scrollbar-track {
+    background: #0a0a12;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* 선택 텍스트 스타일 */
+::selection {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+.dark ::selection {
+    background-color: #38bdf8;
+    color: #0a0a12;
+}
+
+/* 링크 포커스 스타일 */
+a:focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* 버튼 활성화 상태 */
+button:active {
+    transform: scale(0.98);
+}
+
+/* 테마 토글 버튼 애니메이션 */
+#theme-toggle {
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
